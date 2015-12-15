@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<export version="D">
+  <design>
+    <source>/home/fabien/Documents/HPP/HPP.sch</source>
+    <date>dim. 01 nov. 2015 22:44:59 CET</date>
+    <tool>Eeschema 4.0.0-rc1-stable</tool>
+    <sheet number="1" name="/" tstamps="/">
+      <title_block>
+        <title/>
+        <company/>
+        <rev/>
+        <date>27 oct 2015</date>
+        <source>HPP.sch</source>
+        <comment number="1" value=""/>
+        <comment number="2" value=""/>
+        <comment number="3" value=""/>
+        <comment number="4" value=""/>
+      </title_block>
+    </sheet>
+  </design>
+  <components>
+    <comp ref="U1">
+      <value>APA102</value>
+      <footprint>APA102:APA102</footprint>
+      <libsource lib="apa102" part="APA102"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>562FD39F</tstamp>
+    </comp>
+    <comp ref="U2">
+      <value>APA102</value>
+      <footprint>APA102:APA102</footprint>
+      <libsource lib="apa102" part="APA102"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>562FD3E5</tstamp>
+    </comp>
+    <comp ref="U3">
+      <value>APA102</value>
+      <footprint>APA102:APA102</footprint>
+      <libsource lib="apa102" part="APA102"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>562FD3F4</tstamp>
+    </comp>
+    <comp ref="U4">
+      <value>APA102</value>
+      <footprint>APA102:APA102</footprint>
+      <libsource lib="apa102" part="APA102"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>562FD403</tstamp>
+    </comp>
+    <comp ref="P1">
+      <value>CONN_4</value>
+      <footprint>Connect:bornier4</footprint>
+      <libsource lib="HPP-cache" part="CONN_4"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>562FD50F</tstamp>
+    </comp>
+    <comp ref="P2">
+      <value>CONN_4</value>
+      <footprint>Connect:bornier4</footprint>
+      <libsource lib="HPP-cache" part="CONN_4"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>562FD531</tstamp>
+    </comp>
+  </components>
+  <libparts>
+    <libpart lib="apa102" part="APA102">
+      <fields>
+        <field name="Reference">U</field>
+        <field name="Value">APA102</field>
+      </fields>
+      <pins>
+        <pin num="1" name="Di" type="input"/>
+        <pin num="2" name="Ci" type="input"/>
+        <pin num="3" name="GND" type="power_in"/>
+        <pin num="4" name="VCC" type="power_in"/>
+        <pin num="5" name="Co" type="output"/>
+        <pin num="6" name="Do" type="output"/>
+      </pins>
+    </libpart>
+    <libpart lib="HPP-cache" part="CONN_4">
+      <fields>
+        <field name="Reference">P</field>
+        <field name="Value">CONN_4</field>
+      </fields>
+      <pins>
+        <pin num="1" name="P1" type="passive"/>
+        <pin num="2" name="P2" type="passive"/>
+        <pin num="3" name="P3" type="passive"/>
+        <pin num="4" name="P4" type="passive"/>
+      </pins>
+    </libpart>
+  </libparts>
+  <libraries>
+    <library logical="apa102">
+      <uri>/home/fabien/Documents/HPP/apa102.lib</uri>
+    </library>
+    <library logical="HPP-cache">
+      <uri>/home/fabien/Documents/HPP/HPP-cache.lib</uri>
+    </library>
+  </libraries>
+  <nets>
+    <net code="1" name="Net-(U2-Pad6)">
+      <node ref="U2" pin="6"/>
+      <node ref="U3" pin="1"/>
+    </net>
+    <net code="2" name="Net-(U3-Pad6)">
+      <node ref="U3" pin="6"/>
+      <node ref="U4" pin="1"/>
+    </net>
+    <net code="3" name="Net-(U2-Pad5)">
+      <node ref="U3" pin="2"/>
+      <node ref="U2" pin="5"/>
+    </net>
+    <net code="4" name="Net-(U3-Pad5)">
+      <node ref="U3" pin="5"/>
+      <node ref="U4" pin="2"/>
+    </net>
+    <net code="5" name="Net-(P1-Pad2)">
+      <node ref="P1" pin="2"/>
+      <node ref="U1" pin="2"/>
+    </net>
+    <net code="6" name="Net-(P1-Pad3)">
+      <node ref="U1" pin="1"/>
+      <node ref="P1" pin="3"/>
+    </net>
+    <net code="7" name="Net-(P2-Pad3)">
+      <node ref="U4" pin="5"/>
+      <node ref="P2" pin="3"/>
+    </net>
+    <net code="8" name="Net-(P2-Pad2)">
+      <node ref="U4" pin="6"/>
+      <node ref="P2" pin="2"/>
+    </net>
+    <net code="9" name="Net-(P1-Pad4)">
+      <node ref="P1" pin="4"/>
+      <node ref="P2" pin="1"/>
+      <node ref="U2" pin="4"/>
+      <node ref="U1" pin="4"/>
+      <node ref="U3" pin="4"/>
+      <node ref="U4" pin="4"/>
+    </net>
+    <net code="10" name="Net-(U1-Pad6)">
+      <node ref="U1" pin="6"/>
+      <node ref="U2" pin="1"/>
+    </net>
+    <net code="11" name="Net-(U1-Pad5)">
+      <node ref="U1" pin="5"/>
+      <node ref="U2" pin="2"/>
+    </net>
+    <net code="12" name="Net-(P1-Pad1)">
+      <node ref="U4" pin="3"/>
+      <node ref="U3" pin="3"/>
+      <node ref="U2" pin="3"/>
+      <node ref="U1" pin="3"/>
+      <node ref="P2" pin="4"/>
+      <node ref="P1" pin="1"/>
+    </net>
+  </nets>
+</export>
